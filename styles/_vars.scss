@@ -1,0 +1,32 @@
+// font Cormorant Garamond & Lobster
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Lobster&display=swap');
+
+// colors
+$day : #FFDD69;
+$day-light1 : #FFF4CF;
+$day-light2 : #FFE897;
+$day-dark1 : #FFD43F;
+$day-dark2 : #FFC90D;
+$night : #7C71E6;
+$night-light1 : #D0CCF3;
+$night-light2 : #9E97EA;
+$night-dark1 : #5E50E7;
+$night-dark2 : #3D2BEE;
+$red:#F9738D;
+
+// globals
+$corner: 15px;
+$rounded: 15%;
+$gutter: .8rem;
+$shadow: 5px 5px 15px 5px #0000005d;
+$text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+
+// font
+
+$font-size: 1.5rem;
+$font-weight-bold: 500;
+$font-weight-normal: 500;
+$font-weight-light: 300;
+
+$font-primary: 'Cormorant Garamond', serif;
+$font-secondary: 'Lobster', cursive;
