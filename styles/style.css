@@ -1,21 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Lobster&display=swap");
-@media only screen and (max-width: 320px) {
-  .navigation {
-    font-size: 2em;
+@media only screen and (max-width: 1200px) {
+  body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .apropos__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 body {
-  background-color: #FFDD69;
+  background: linear-gradient(175deg, #d0ccf3 0%, #9e97ea 6%, #7c71e6 35%, #3d2bee 100%);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#main {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+
+#moon {
+  width: 100px;
+  height: 100px;
+  background: #eef;
+  border-radius: 50%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#bdy:target {
+  background: linear-gradient(175deg, #fff4cf 0%, #ffe897 6%, #ffdd69 35%, #ffc90d 100%);
+}
+
+#bdy:target #main #moon {
+  background: #F6D602;
+  border: 5px solid #f5eb71;
+}
+
+#bdy:target #main #moon .spots {
+  width: 0px;
+  height: 0px;
+  background: #F6D602;
+}
+
+#bdy:target #main #cover {
+  background: #FFE897;
+  -webkit-transform: translate(110px, -104px);
+          transform: translate(110px, -104px);
+}
+
+#moonspot1 {
+  width: 15px;
+  height: 15px;
+  background: #ccd;
+  border-radius: 50%;
+  -webkit-transform: translate(6px, 40px);
+          transform: translate(6px, 40px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#moonspot2 {
+  width: 6px;
+  height: 6px;
+  background: #ccd;
+  border-radius: 50%;
+  -webkit-transform: translate(18px, 42px);
+          transform: translate(18px, 42px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#cover {
+  width: 100px;
+  height: 100px;
+  background: #FFE897;
+  border-radius: 50%;
+  -webkit-transform: translate(38px, -104px);
+          transform: translate(38px, -104px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
-  color: #9E97EA;
+  color: #444444;
 }
 
 .header {
   font-size: 3rem;
-  color: #5E50E7;
+  color: #444444;
   text-align: center;
 }
 
@@ -24,13 +112,14 @@ body {
   font-size: 1.5rem;
   position: sticky;
   position: -webkit-sticky;
+  height: 130px;
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   border-bottom: 1px solid #1a1a1a4b;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -60,10 +149,13 @@ body {
 .navigation__item a {
   margin-left: 2.4rem;
   text-decoration: none;
+  color: #444444;
+  font-weight: bold;
+  font-size: 2.25rem;
 }
 
 .navigation__item a:visited {
-  color: #3D2BEE;
+  color: #444444;
 }
 
 .navigation__item:hover {
@@ -152,13 +244,13 @@ body {
   border-radius: 15px;
   padding: 0.8rem;
   margin-right: 1.6rem;
-  -webkit-animation: scrollTxt 10s linear infinite;
-          animation: scrollTxt 10s linear infinite;
+  -webkit-animation: scrollTxt 3s ease-in forwards;
+          animation: scrollTxt 3s ease-in forwards;
 }
 
 .skills__wrapper-2 {
-  -webkit-animation: scrollTxt2 10s linear infinite;
-          animation: scrollTxt2 10s linear infinite;
+  -webkit-animation: scrollTxt2 3s ease-in forwards;
+          animation: scrollTxt2 3s ease-in forwards;
   background-color: #FFF4CF;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -298,7 +390,7 @@ body {
   cursor: pointer;
   background-color: #FFDD69;
   border: none;
-  color: #3D2BEE;
+  color: #444444;
   border-radius: 15px;
 }
 
@@ -320,6 +412,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 150px;
+  padding: 0.8rem;
+  border-radius: 15px;
 }
 
 .footer__fleche-img:hover {
@@ -328,6 +422,8 @@ body {
 
 .footer__wrapper__fleche-img, .footer__wrapper__github-img, .footer__wrapper__email-img {
   width: 50px;
+  padding: 0.8rem;
+  border-radius: 15px;
 }
 
 .footer__wrapper__fleche-img:hover, .footer__wrapper__github-img:hover, .footer__wrapper__email-img:hover {

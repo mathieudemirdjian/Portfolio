@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mathieu Demirdjian | Developpeur web</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
-
+<body id="bdy">
+  
     <nav class="navigation">
-            <button type="navigation__button button">
-                day/night
-            </button>
+        <div id='main' >
+
+            <a href="#">
+                <div id='moon'>
+                    <div id="moonspot1" class="spots"></div>
+                    <div id="moonspot2" class="spots"></div>
+                </div>
+            </a>
+              
+            <a href="#bdy">
+                <div id='cover'></div>
+            </a>
+          
+        </div>
 
         <ul class="navigation__list">
             <li class="navigation__item">
-                <a href="#">Home</a>
+                <a href="#">Accueil</a>
             </li>
             <li class="navigation__item">
                 <a href="#apropos">A propos</a>
@@ -31,16 +42,11 @@
 
     </nav>
     
-    <!-- <section class="home">
-        <div class="home__leftdoor">
-            <img src="" alt="" home leftdoor>
-            <p>Bienvenue,<br>Je suis</p>
-        </div>
-        <div class="home__rightdoor">
-            <img src="" alt="">
-            <h1>Mathieu Demirdjian, <br> Développeur web fullstack</h1>
-        </div>
-    </section> -->
+        <!-- <div class="home__door">
+            <img class="home__door-img" src="./assets/door.jpg" alt="porte">
+            <h1 class="home__door-title">Bienvenue,<br>Je suis Mathieu Demirdjian,<br> Développeur web fullstack</h1>
+        </div> -->
+       
     <main class="apropos" id="apropos">
         <h2 class="apropos__header header">A propos</h2>
         <div class="apropos__content">
@@ -75,10 +81,6 @@
                         <div class="skills__item">
                             <img class="skills__item-img" src="./assets/sass.png" alt="logo de sass">
                             <p class="skills__item-name">SASS</p>
-                        </div>
-                        <div class="skills__item">
-                            <img class="skills__item-img" src="./assets/mongo.png" alt="logo de mongo">
-                            <p class="skills__item-name">MONGODB</p>
                         </div>
                         <div class="skills__item">
                             <img class="skills__item-img" src="./assets/git.png" alt="logo de git">
@@ -146,14 +148,14 @@
             <a class="footer__wrapper__fleche" href="#">
                 <img class="footer__wrapper__fleche-img" src="./assets/up.png" alt="flèche en haut">
             </a>
-            <a class="footer__wrapper__github" href="https://github.com/mathieudemirdjian" >
+            <a class="footer__wrapper__github" href="https://github.com/mathieudemirdjian" target="_blank">
                  <img class="footer__wrapper__github-img" src="./assets/github.png" alt="image de github">
             </a>
             <a class="footer__wrapper__email" href="mailto:mathieu.demirdjian@gmail.com" >
                 <img class="footer__wrapper__email-img" src="./assets/email.png" alt="image d'un email">
             </a>
         </div>
-        <p>MATHIEU DEMIRDJIAN ©2022</p>
+        <p class="footer__p">MATHIEU DEMIRDJIAN ©2022</p>
     </footer>
 </body>
 </html>
