@@ -1,6 +1,6 @@
 // font Cormorant Garamond & Lobster
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Lobster&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 // colors
 $day : #FFDD69;
 $day-light1 : #FFF4CF;
@@ -14,13 +14,14 @@ $night-dark1 : #5E50E7;
 $night-dark2 : #3D2BEE;
 $red:#F9738D;
 $night-gradient:linear-gradient(175deg, rgba(208,204,243,1) 0%, rgba(158,151,234,1) 6%, rgba(124,113,230,1) 35%, rgba(61,43,238,1) 100%);
+$day-gradient: linear-gradient(175deg, rgba(255, 244, 207, 1) 0%, rgba(255, 232, 151, 1) 6%, rgba(255, 221, 105, 1) 35%, rgba(255, 201, 13, 1) 100%);
 
 // globals
 $corner: 15px;
 $gutter: .8rem;
 $shadow: 5px 5px 15px 5px #0000005d;
 $text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
-
+$box-shadow: 0px 10px 1px $day-light1, 0 10px 20px $day-light1;
 // font
 
 $font-size: 1.5rem;
@@ -28,5 +29,6 @@ $font-weight-bold: 500;
 $font-weight-normal: 500;
 $font-weight-light: 300;
 
-$font-primary: 'Cormorant Garamond', serif;
+// $font-primary: 'Cormorant Garamond', serif;
 $font-secondary: 'Lobster', cursive;
+$font-primary: 'Montserrat', sans-serif;
