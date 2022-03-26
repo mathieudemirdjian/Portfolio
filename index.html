@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mathieu Demirdjian | Developpeur web</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
-   
-    <nav class="navbar">
-        <button type="navbar__button">
-            day/night
-        </button>
-        <ul class="navigation">
+
+<body >
+
+    <div class="door" >
+        <img class="door-img" src="./assets/door.jpg" alt="porte">
+        <div class="door-p">
+            <p>Bienvenue,</p>
+            <p>Je suis Mathieu Demirdjian</p>
+            <p>Développeur web fullstack</p>
+        </div>
+    </div>
+    
+    <nav class="navigation">
+
+        <div class="sun-moon">
+            <span class="circle large"></span>
+            <span class="circle small"></span>
+        </div>
+
+        <div class="burger">
+            <span></span>
+            
+        </div>
+        <div class="dropdown-menu">
+            <ul class="dropdown-menu-ul">
+                <li class="dropdown-menu__item">
+                    <a href="/">Accueil</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="#apropos">A propos</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="#projets">Projets</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="navigation__list-desktop">
             <li class="navigation__item">
-                <a href="/">Home</a>
+                <a href="/">Accueil</a>
             </li>
-            <li class="navigation__item--active">
+            <li class="navigation__item">
                 <a href="#apropos">A propos</a>
             </li>
             <li class="navigation__item">
@@ -26,71 +61,74 @@
                 <a href="#contact">Contact</a>
             </li>
         </ul>
+
+
     </nav>
+
     
-    <section class="home">
-        <div class="home__leftdoor">
-            <img src="" alt="" home leftdoor>
-            <p>Bienvenue,<br>Je suis</p>
-        </div>
-        <div class="home__rightdoor">
-            <img src="" alt="">
-            <h1>Mathieu Demirdjian, <br> Développeur web fullstack</h1>
-        </div>
-    </section>
+
     <main class="apropos" id="apropos">
         <h2 class="apropos__header header">A propos</h2>
         <div class="apropos__content">
             <div class="profile">
-                <img src="" alt="" class="profile__picture">
-                <p class="profile__content">Motivé par la philosophie de l'apprentissage, je suis un développeur fullstack passionné par React, Javascript et tout ce qui concerne le développement web. <br> La combinaison de la créativité, de la logique et le faite de découvrir chaque jour de nouvelles choses alimente ma passion pour le dev.<br>Lorsque je ne suis pas devant mon ordinateur j'aime passer du temps à perfectionner mon mandarin, à faire du sport et à jouer avec mon fils.</p>
+                <img src="./assets/mathieu.png" alt="profile de mathieu" class="profile__picture">
+                <p class="profile__content">Motivé par la philosophie de l'apprentissage, je suis un développeur
+                    fullstack passionné par React, Javascript et tout ce qui concerne le développement web.<br> La
+                    combinaison de la créativité, de la logique et le faite de découvrir chaque jour de nouvelles choses
+                    alimente ma passion pour le dev.<br>Lorsque je ne suis pas devant mon ordinateur j'aime passer du
+                    temps à perfectionner mon mandarin, à faire du sport et à jouer avec mon fils.</p>
             </div>
             <div class="skills">
                 <div class="skills__row">
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
-                    </div>
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
-                    </div>
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
-                    </div>
-                </div>
-                <div class="skills__row">
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
-                    </div>
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
-                    </div>
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
-                    </div>
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
+                    <div class="skills__wrapper">
+                        <div class="skills__item">
+                            <img class="skills__item-img" src="./assets/html.png" alt="logo html">
+                            <p class="skills__item-name">HTML</p>
+                        </div>
+                        <div class="skills__item">
+                            <img class="skills__item-img" src="./assets/react.png" alt="logo de react">
+                            <p class="skills__item-name">REACT</p>
+                        </div>
+                        <div class="skills__item">
+                            <img class="skills__item-img" src="./assets/express.png" alt="logo de express">
+                            <p class="skills__item-name">EXPRESS</p>
+                        </div>
                     </div>
                 </div>
                 <div class="skills__row">
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
+                    <div class="skills__wrapper-2">
+                        <div class="skills__item">
+                            <img class="skills__item-img" src="./assets/js.png" alt="logo de js">
+                            <p class="skills__item-name">JAVASCRIPT</p>
+                        </div>
+                        <div class="skills__item">
+                            <img class="skills__item-img" src="./assets/sass.png" alt="logo de sass">
+                            <p class="skills__item-name">SASS</p>
+                        </div>
+                        <div class="skills__item">
+                            <img class="skills__item-img" src="./assets/git.png" alt="logo de git">
+                            <p class="skills__item-name">GIT</p>
+                        </div>
+
                     </div>
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
+                </div>
+                <div class="skills__row">
+                    <div class="skills__wrapper">
+                        <div class="skills__item">
+                            <img class="skills__item-img" src="./assets/css.png" alt="logo de css">
+                            <p class="skills__item-name">CSS</p>
+                        </div>
+                        <div class="skills__item">
+                            <img class="skills__item-img" src="./assets/nodejs.png" alt="logo de nodejs">
+                            <p class="skills__item-name">NODEJS</p>
+                        </div>
+                        <div class="skills__item">
+                            <img class="skills__item-img" src="./assets/mongo.png" alt="logo de nextjs">
+                            <p class="skills__item-name">MONGO</p>
+                        </div>
+
                     </div>
-                    <div class="skills__item">
-                        <img class="skills__item-img" src="" alt="">
-                        <p class="skills__item-name"></p>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -100,36 +138,53 @@
         <div class="projets__content">
             <div class="projets__content-1">
                 <h2 class="projets__content-1--title">Dev-YzzY</h2>
-                <p  class="projets__content-1--info">Enregistre et organise ton code sous forme de notes</p>
-                <p class="projets__content-1--info">lien github</p>
+                <p class="projets__content-1--info">Enregistre et organise ton code sous forme de notes</p>
+                <p class="projets__content-1--info"><img class="projets__content-github" src="./assets/github.png"
+                        alt="github"></p>
             </div>
-            <div class="projets__img-1">
-                <img src="" alt="">
-            </div>
+            <img class="projets__content-1--img" src="./assets/devyzzy.png"
+                alt="impression d'écran de l'appli dev-yzzy">
         </div>
     </section>
     <section class="contact" id="contact">
-        <h2>Contact</h2>
-        <p>Une question, un conseil ? Ou même pour discuter, n'hésitez pas à me contacter et je vous répondrai dès que possible.</p>
-        <form action="" class="contact__form" action="https://formspree.io/f/xqknljqz" method="post">
-            <input type="text" class="contact__form-name" placeholder="Nom">
-            <input type="text" class="contact__form-email" placeholder="Email">
-            <textarea type="text" class="contact__form-message" cols="30" rows="10"></textarea>
-            <div class="contact__form-error">
+        <h2 class="contact__header header">Contact</h2>
+        <div class="contact__wrapper">
+            <p class="contact__wrapper-p">Une question, un conseil ? <br> Ou même pour discuter, n'hésitez pas à me contacter et je vous répondrai
+                dès que possible.</p>
+            <form class="contact__form" action="https://formspree.io/f/xqknljqz" method="post">
+                <input type="text" name="name" class="contact__form-name" placeholder="Nom">
+                <input type="text" name="email" class="contact__form-email" placeholder="Email">
+                <textarea type="text" name="message" class="contact__form-message"
+                    placeholder="Entrez votre message" cols="50" rows="20"></textarea>
                 <div class="contact__form-error">
-                    <p class="contact__form-error--name">Entrez votre nom s'il vous plait</p>
-                    <p class="contact__form-error--email">Entrez votre email s'il vous plait</p>
-                    <p class="contact__form-error--message">Ajoutez un message s'il vous plait</p>
+                    <div class="contact__form-error">
+                        <!-- <p class="contact__form-error--name">Entrez votre nom s'il vous plait</p>
+                        <p class="contact__form-error--email">Entrez votre email s'il vous plait</p>
+                        <p class="contact__form-error--message">Ajoutez un message s'il vous plait</p> -->
+                    </div>
                 </div>
-            </div>
-            <button type="submit">
-                Valider
-            </button>
+                <button class="contact__button" type="submit">
+                    Valider
+                </button>
 
-        </form>
+            </form>
+        </div>
     </section>
-    <footer>
-        
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <a class="footer__wrapper__fleche" href="#">
+                <img class="footer__wrapper__fleche-img" src="./assets/up.png" alt="flèche en haut">
+            </a>
+            <a class="footer__wrapper__github" href="https://github.com/mathieudemirdjian" target="_blank">
+                <img class="footer__wrapper__github-img" src="./assets/github.png" alt="image de github">
+            </a>
+            <a class="footer__wrapper__email" href="mailto:mathieu.demirdjian@gmail.com">
+                <img class="footer__wrapper__email-img" src="./assets/email.png" alt="image d'un email">
+            </a>
+        </div>
+        <p class="footer__p">MATHIEU DEMIRDJIAN ©2022</p>
     </footer>
+    <script src="./index.js"></script>
 </body>
+
 </html>
