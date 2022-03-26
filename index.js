@@ -19,10 +19,16 @@
 // document.addEventListener('DOMContentLoaded', base.init);
 
 const burger = document.querySelector('.burger');
+const menu = document.querySelector('.dropdown-menu');
 
-burger.addEventListener('click', () => {
+burger.addEventListener('click', (e) => {
+    // if ((!burger.contains(e.target)) || (!menu.contains(e.target))){
+    //     burger.classList.toggle('active')
+    //     menu.classList.toggle('dropdown-menu-active')
+    // }
     burger.classList.toggle('active')
-})
+    menu.classList.toggle('dropdown-menu-active')
+});
 
 const door = document.querySelector('.door');
 const body = document.body;
@@ -36,15 +42,10 @@ setTimeout( ()=> {
 
 const switchBox = document.querySelector(".sun-moon");
 
-document.querySelector("input").addEventListener("change", (e) => {
-    const { checked } = e.target;   
-    if (checked) {
-        switchBox.classList.add("move");
-        body.classList.add('daymode')
-    } else {
-        switchBox.classList.remove("move");
-        body.classList.remove('daymode')
-    }
+switchBox.addEventListener("click", () => {
+    switchBox.classList.toggle('move')
+    body.classList.toggle('daymode')
+    
 });
 
 

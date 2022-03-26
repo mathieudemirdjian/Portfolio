@@ -23,15 +23,30 @@
     <nav class="navigation">
 
         <div class="sun-moon">
-            <input type="checkbox" />
             <span class="circle large"></span>
             <span class="circle small"></span>
         </div>
 
         <div class="burger">
             <span></span>
+            
         </div>
-
+        <div class="dropdown-menu">
+            <ul class="dropdown-menu-ul">
+                <li class="dropdown-menu__item">
+                    <a href="/">Accueil</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="#apropos">A propos</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="#projets">Projets</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
         <ul class="navigation__list-desktop">
             <li class="navigation__item">
                 <a href="/">Accueil</a>
@@ -46,6 +61,7 @@
                 <a href="#contact">Contact</a>
             </li>
         </ul>
+
 
     </nav>
 
@@ -104,7 +120,7 @@
                         </div>
                         <div class="skills__item">
                             <img class="skills__item-img" src="./assets/nodejs.png" alt="logo de nodejs">
-                            <p class="skills__item-name">NODE JS</p>
+                            <p class="skills__item-name">NODEJS</p>
                         </div>
                         <div class="skills__item">
                             <img class="skills__item-img" src="./assets/mongo.png" alt="logo de nextjs">
@@ -139,7 +155,7 @@
                 <input type="text" name="name" class="contact__form-name" placeholder="Nom">
                 <input type="text" name="email" class="contact__form-email" placeholder="Email">
                 <textarea type="text" name="message" class="contact__form-message"
-                    placeholder="Entrez votre petit mot doux" cols="50" rows="20"></textarea>
+                    placeholder="Entrez votre message" cols="50" rows="20"></textarea>
                 <div class="contact__form-error">
                     <div class="contact__form-error">
                         <!-- <p class="contact__form-error--name">Entrez votre nom s'il vous plait</p>
