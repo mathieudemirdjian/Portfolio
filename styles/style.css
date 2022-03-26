@@ -350,7 +350,7 @@ body {
   padding: 0.8rem;
   background-color: #FFE897;
   border-radius: 15px;
-  line-height: 3px;
+  line-height: 35px;
 }
 
 @-webkit-keyframes moveInRight {
