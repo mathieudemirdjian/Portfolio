@@ -1,0 +1,320 @@
+@import "./vars";
+
+@media only screen and (max-width: 640px) {
+
+  .door {
+    &-p {
+      font-size: 2em;
+    }
+  }
+
+  .sun-moon {
+    cursor: pointer;
+    position: fixed;
+    left: 20px;
+    width: 55px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 45px;
+    border: 3px solid #1a237e;
+    background-color: #3f51b5;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);     
+  }
+  
+  .circle {
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .small {
+    width: 25px;
+    height: 25px;
+    background: #3f51b5;
+    left: 20px;
+    top: 3px;
+    transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  
+  .large {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border: 3px solid #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 7px;
+    transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  .sun-moon input {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .move {
+    background-color: #fff;
+    border-color: #f3909a;
+  }
+  
+  //Move the bigger circle
+  .move .large {
+    left: 30px;
+    background: yellow;
+    border-color: orange;
+  }
+  
+  //Move the smaller circle
+  .move .small {
+    left: 60px;
+    top: 55px;
+    background-color: #fff;
+  }
+
+  body {
+    align-items: center;
+    font-size: $font-size*0.5;
+  }
+
+  .dropdown-menu-active {
+    width: 100px;
+    height: 200px;
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    background-color:$day-light1;
+    border-radius: $corner;
+    opacity: 0.8;
+    box-shadow: $box-shadow;
+  }
+
+  .dropdown-menu__item {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      &:visited {
+        color: #4e4e4e;
+      }
+    }
+  }
+
+  .dropdown-menu-ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-menu__item {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #444444;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .navigation {
+    height: 60px;
+  }
+
+  .header {
+    font-size:2rem;
+  }
+
+  .header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    &::after {
+      position: absolute;
+      content: '';
+      border-bottom: 18px solid $day;
+      width: 9rem;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      left: 3.5rem;
+      top: -1rem;
+      z-index: -1;
+    }
+  }
+
+  .navigation__list-desktop,
+  ul,
+  li {
+    display: none;
+  }
+
+  .apropos__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    
+  }
+
+  .apropos {
+    width: 80%;
+    margin: auto;
+  }
+
+  .skills {
+    gap: 2em;
+
+    &__row {
+      display: flex;
+      overflow: hidden;
+      margin: 0.5%;
+    }
+  
+    &__item {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      
+      &-img {
+        width: 3em;
+        height: 3em;
+        margin: auto;
+      }
+  
+      &-name {
+        text-align: center;
+        font-size: $font-size* 0.4;
+        padding: $gutter *0.4;
+      }
+    }
+    &__wrapper {
+      background-color: $day-light1;
+      border-radius: $corner;
+      padding: $gutter;
+      height:min-content;
+      animation: scrollTxt 9s cubic-bezier(0.21, 1.11, 0.81, 0.99);
+  
+      &-2 {
+        animation: scrollTxt2 9s cubic-bezier(0.21, 1.11, 0.81, 0.99);
+        background-color: $day-light1;
+        border-radius: $corner;
+        padding: $gutter;
+        height: min-content;
+      }
+    }
+  }
+
+  .burger {
+    width: 42px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    right: 30px;
+    & span {
+      width: 100%;
+      height: 4px;
+      background-color: #444444;
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background-color 0.5s ease-in-out
+    }
+  }
+
+  .burger span::before,
+  .burger span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #444444;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .burger span::before {
+    transform: translateY(-10px);
+  }
+
+  .burger span::after {
+    transform: translateY(10px);
+
+  }
+
+  .burger.active span {
+    background-color: transparent;
+  }
+
+  .burger.active span::before {
+    transform: translateY(0px) rotateZ(45deg)
+  }
+
+  .burger.active span::after {
+    transform: translateY(0px) rotateZ(-45deg)
+  }
+
+  .skills {
+    &__wrapper {
+      animation: scrollTxt 10s cubic-bezier(0.21, 1.11, 0.81, 0.99);
+  
+      &-2 {
+        animation: scrollTxt2 10s cubic-bezier(0.21, 1.11, 0.81, 0.99);
+      }
+    }
+  }
+  .profile__content, .projets__content-1,.contact__wrapper,.projets__content-1--info {
+    line-height: 18px;
+  }
+  .projets{
+  
+    &__content{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      
+      &-1 {
+      align-items: center;
+      padding:0;       
+      }
+      &-1--info{
+        padding: 0 1em;
+      }
+      &-1--img{
+        width: 90%;
+        height: auto;
+        &:hover{
+          pointer-events: none;
+        }
+      }
+      &-github {
+        width: 20px;
+        padding-top: 1em;
+      }
+    }
+  }
+  .contact {
+    &__wrapper {
+      width: 80%;
+      &-p{
+        padding-bottom: $gutter*2;
+      }
+    }
+    input {
+      width: 90%;
+    }
+    textarea {
+      width: 90%;
+
+    }
+  
+}
+}

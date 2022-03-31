@@ -12,7 +12,7 @@
 <body >
 
     <div class="door" >
-        <img class="door-img" src="./assets/door.jpg" alt="porte">
+        <img class="door-img" src="./assets/door.webp" alt="porte">
         <div class="door-p">
             <p>Bienvenue,</p>
             <p>Je suis Mathieu Demirdjian</p>
@@ -71,7 +71,7 @@
         <h2 class="apropos__header header">A propos</h2>
         <div class="apropos__content">
             <div class="profile">
-                <img src="./assets/mathieu.png" alt="profile de mathieu" class="profile__picture">
+                <img src="./assets/mathieu.webp" alt="profile de mathieu" class="profile__picture">
                 <p class="profile__content">Motivé par la philosophie de l'apprentissage, je suis un développeur
                     fullstack passionné par React, Javascript et tout ce qui concerne le développement web.<br> La
                     combinaison de la créativité, de la logique et le faite de découvrir chaque jour de nouvelles choses
@@ -123,8 +123,8 @@
                             <p class="skills__item-name">NODEJS</p>
                         </div>
                         <div class="skills__item">
-                            <img class="skills__item-img" src="./assets/mongo.png" alt="logo de nextjs">
-                            <p class="skills__item-name">MONGO</p>
+                            <img class="skills__item-img" src="./assets/postgre.svg.png" alt="logo de nextjs">
+                            <p class="skills__item-name">POSTGRESQL</p>
                         </div>
 
                     </div>
@@ -149,27 +149,26 @@
     <section class="contact" id="contact">
         <h2 class="contact__header header">Contact</h2>
         <div class="contact__wrapper">
-            <p class="contact__wrapper-p">Une question, un conseil ? <br> Ou même pour discuter, n'hésitez pas à me contacter et je vous répondrai
+            <p class="contact__wrapper-p">Une question, un conseil ? <br> Ou encore pour discuter, n'hésitez pas à me contacter et je vous répondrai
                 dès que possible.</p>
-            <form class="contact__form" action="https://formspree.io/f/xqknljqz" method="post">
-                <input type="text" name="name" class="contact__form-name" placeholder="Nom">
-                <input type="text" name="email" class="contact__form-email" placeholder="Email">
-                <textarea type="text" name="message" class="contact__form-message"
-                    placeholder="Entrez votre message" cols="50" rows="20"></textarea>
-                <div class="contact__form-error">
-                    <div class="contact__form-error">
-                        <!-- <p class="contact__form-error--name">Entrez votre nom s'il vous plait</p>
-                        <p class="contact__form-error--email">Entrez votre email s'il vous plait</p>
-                        <p class="contact__form-error--message">Ajoutez un message s'il vous plait</p> -->
-                    </div>
-                </div>
+            <div id="erreur" class="contact__form-erreur"></div>
+            <form id="form" class="contact__form" action="https://formspree.io/f/xqknljqz" name="form" method="POST">
+                <label for="name">Nom</label>
+                <input id="nom" type="text" name="name" class="contact__form-name" placeholder="Oscar" required>
+                <label for="email">Email</label>
+                <input id="email" type="text" name="email" class="contact__form-email" placeholder="Oscar@gmail.com" required>
+                <label for="texte">Votre message</label>
+                <textarea id="texte" type="text" name="message" class="contact__form-message"
+                    placeholder="Entrez votre message" cols="50" rows="20" required></textarea>
                 <button class="contact__button" type="submit">
                     Valider
                 </button>
-
             </form>
         </div>
     </section>
+    
+        </div>
+    </main>
     <footer class="footer">
         <div class="footer__wrapper">
             <a class="footer__wrapper__fleche" href="#">
