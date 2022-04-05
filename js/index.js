@@ -6,6 +6,27 @@ burger.addEventListener('click', () => {
     menu.classList.toggle('dropdown-menu-active')
 });
 
+const dropDownMenu = document.querySelectorAll('.dropdown-menu__item, .navigation__item');
+
+dropDownMenu.forEach(menuItem => {
+    menuItem.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const id = e.target.getAttribute('href');
+
+        if (id === '/Portfolio') {
+            window.location.href = '/Portfolio';
+            return false;
+        }
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth'
+        });
+    })
+})
+
+
+
 const door = document.querySelector('.door');
 const body = document.body;
 
@@ -28,8 +49,6 @@ const email = document.getElementById('email');
 const texte = document.getElementById('texte');
 const form = document.getElementById('form');
 const erreur = document.getElementById('erreur');
-console.log(nom);
-console.log(texte);
 form.addEventListener('submit', (e) => {
     console.log(e);
     let messages = [];
